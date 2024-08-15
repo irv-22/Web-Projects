@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Additional Pages</title>
+        <script >{
+            function addRows(dataTable) {
+                var table = document.getElementById(dataTable);
+                var rowCount = table.rows.length;
+                var row = table.insertRow(rowCount);
+    
+                var cell1 = row.insertCell(0);
+                //var element1 = document.getElementById('col0');
+                cell1.innerHTML = "Co-Author name:";
+                //cell1.appendChild(element1);
+    
+                var cell2 = row.insertCell(1);
+                var element2 = document.createElement("input");
+                element2.type = "text";
+                element2.name = "author[]";
+                cell2.appendChild(element2);
+            }
+            }
+        </script>
+    </head>
+    <body>
+            <h1>Add book</h1>
+            <p>
+                Please enter below the details of the book to add.
+            </p>
+            <form action="AddBookServlet.do" method="POST">
+                <table>
+                    <tr>
+                        <td>ISBN: </td>
+                        <td><input type="text" name="isbn"/></td>
+                    </tr>
+                    <tr>
+                        <td>Title: </td>
+                        <td><input type="text" name="title"/></td>
+                    </tr>
+                </table>
+                <table id="dataTable">
+                    <tr>
+                        <td id="col0">Author name: </td>
+                        <td id="col1"><input type="text" name="author[]"/></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><input type="button" value="ADD AUTHOR" onclick="addRows('dataTable')"/></td>
+                        <td><input type="button" value="DELETE AUTHOR" onclick="deleteRows()"/></td>
+                        <td><input type="submit" value="ADD"/></td>
+                    </tr>
+                </table>
+            </form>
+    </body>
+</html>

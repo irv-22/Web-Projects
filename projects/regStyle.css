@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+
+}
+.container{
+    max-width: 700px;
+    width: 100%;
+    background-color: aliceblue;
+    padding-left: 15px;
+    border-radius: 5px;
+
+}
+#title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+.userdetails{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.inputbox{
+   width: 40%;
+}
+.inputbox input{
+    height: 45px;
+    width: 100%;
+}
+.submit input{
+    float: left;
+    width: 100%;
+}

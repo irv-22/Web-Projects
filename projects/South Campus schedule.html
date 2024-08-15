@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>South Campus Bus schedule</title>
+		<style>
+		form {background-color:rgb(69, 233, 54);
+			padding:auto;
+			margin:auto;
+			border: 50%;
+			text-align: center;
+		
+		
+		}
+		p{text-align: center;}
+		label{color:black;}
+		body{background-color:rgb(75, 191, 236);
+			padding: 10px;
+			border: 10px;
+			margin: 10px;
+		
+		}
+		input{color:red}
+		#studentInfo2{display:flex;
+			padding: 5px;
+			float:left;
+			background-color:;
+			margin: 1;
+			border-radius: 12px;
+			clear: right;
+			
+		}
+		#logos{float:right;
+			display: block;
+			width: 1px;
+			flex-direction: column;
+			padding: 10px;
+			border: 10px;
+			margin: 10px;
+			border-radius: 12px;
+		}
+		
+		</style>
+		<script type="text/javascript" src="validateForm.js"></script>
+	</head>
+
+	<body>
+		<p id="paragraph">Enter your information below</p>
+		
+		<form action="results.js" name="myForm" method="get" onsubmit=" returnvalidateForm()" >
+			<fieldset id="StudentInfo">
+				<legend>Student Information</legend>
+					
+					<label for="fullNames"><strong>Full Names:</strong></label>
+					<input name="fullNames" id="fullNames" type="text" placeholder="Itumeleng Irvin Mokoana" required/><br/>
+					<br/><label for="ID number"><strong>ID Number</strong></label>
+					<input name="IDnumber" id="ID number" type="text" placeholder="0201225554082" required/><br/>
+					<br/><label for="studentNumber"><strong>Student Number</strong></label>
+					<input name="studentNumber" id="studentNumber" type="text" placeholder="222200237" required /><br/>
+					<br/><label for="resName"><strong>Res Name</strong></label>
+					<input name="resname" id="resName" type="text" placeholder="PowerPoint" required/><br/>
+					<br/><label for="file">ID copy</label>
+					<input type="file" name="file" id="file" required/><br>
+					<select name="resName" id="resName2">RES Names
+						<option value="PowerPoint">PowerPoint</option>
+						<option value="PowerPoint-2">PowerPoint-2</option>
+						<option value="South Place">South Place</option>
+						<option value="North Place">North Place</option>
+					</select><br>
+					<input type="radio" name="Gender" value="Male">Male
+					<input type="radio" name="Gender" value="Female">Female
+
+					
+			</fieldset>
+			<input style="color:green" name="Submit" type="Submit" onclick="generateSubmit()"/>
+		</form>	
+		<form>
+			<div id="studentInfo2">
+				<input style="border-radius: 12px;clear: right;" type="email" name="email" id="mail" placeholder="enter e-mail here" required/>
+				<input style="border-radius: 12px; clear: right;" type="button" name="subcribe" value="SUBSCRIBE" onclick="generateSubscribe()" />
+			</div>
+		</form>
+		<div id="logos">
+			<br/><i class="facebook"><img src="img/facebook.jpeg" alt="Facebook" style="width: 40px; "/></i>
+			<i class="insta"><a href="@tumi_irvin"><img src="img/instagram.jpeg" alt="Instagram" style="width: 40px;"/></a></i>
+			<i class="app"><img src="img/Whatsapp.jpeg" alt="Whatsapp" style="width: 40px;"/></i>
+			
+			
+			
+		</div>
+		<script type="text/javascript" src="mailSubscription.js"></script>
+			
+		</script>
+			
+	</body>	
+		

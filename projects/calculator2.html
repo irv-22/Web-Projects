@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pretoria Campus Bus schedule</title>
+		<style>
+			body{
+				margin: 0;
+				padding: 0;
+				
+
+			}
+			.container{
+				width: 100vw;
+				height: 100vh;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-template-rows: 50px 1fr 70px;
+			
+			}
+			.container div{
+			
+			}
+			.container .header{
+				grid-column-start: 1;
+				grid-column-end: 3;
+			}
+			.container .footer{
+				grid-column-start: 1;
+				grid-column-end: 3;
+			}
+			.container .main{
+				grid-column-start: 1;
+				grid-column-end: 3;
+			}
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			.calculator{
+				display:grid;
+				align-items: center;
+				justify-content: center;
+				box-sizing: border-box;
+				margin-left: auto;
+				margin-right: auto;
+				width: 50%;
+				background-color:aqua;
+			
+			}
+			.display {
+				width: auto;
+				height: 8vh;
+			
+			}
+			.display input{
+				width: auto;
+				height: 8vh;
+				text-align: right;
+				font-size: 25px;
+			}	
+			.inputs{
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr 1fr;
+			}
+			.zero{
+				grid-column-start: 1;
+				grid-column-end: 3;	
+			}
+			button{
+				padding: 15%;
+				font-size: 25px;
+				border: none;
+			}
+			button:hover{
+				opacity: 0.6;
+				cursor: pointer;
+				background-color: aqua;
+
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="header">
+				<h2>Header</h2>
+			</div>
+
+			<div class="main">
+				<h2>calculator</h2>
+				<div class="calculator">
+					<div class="display">
+						<input type="text" id="displayScreen" name="displayScreen" readonly>
+					</div>
+					<div class="inputs">
+						<button value="AC" onclick="clr()">AC</button>
+						<button value="+/-" onclick="dis('+/-')">+/-</button>
+						<button value="%" onclick="dis('%')">%</button>
+						<button value="+" onclick="dis('+')">+</button>
+
+						<button value="7" onclick="dis('7')">7</button>
+						<button value="8" onclick="dis('8')">8</button>
+						<button value="9" onclick="dis('9')">9</button>
+						<button value="-" onclick="dis('-')">-</button>
+
+						<button value="4" onclick="dis('4')">4</button>
+						<button value="5" onclick="dis('5')">5</button>
+						<button value="6" onclick="dis('6')">6</button>
+						<button value="*" onclick="dis('*')">x</button>
+
+						<button value="1" onclick="dis('1')">1</button>
+						<button value="2" onclick="dis('2')">2</button>
+						<button value="3" onclick="dis('3')">3</button>
+						<button value="/" onclick="dis('/')">/</button>
+
+						<button value="0" onclick="dis('0')" class="zero">0</button>
+						<button value="." onclick="dis('.')">.</button>
+						<button value="=" onclick="solve()">=</button>
+					
+					</div>
+				</div>
+			</div>
+
+			<div class="footer">
+				<h2>Footer</h2>
+			</div>
+		</div>
+		<script type="text/javascript" src="ptaCalc.js"></script>
+	</body>
+</html>		

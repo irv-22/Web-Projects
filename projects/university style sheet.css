@@ -1,0 +1,24 @@
+li{display:inline-block;
+    color: blue;
+    background-color: red;
+    font-size: 60pt;
+    text-align: center;
+    border-radius: 15px;
+    padding: 20px;
+}
+html{
+    background-color:black;
+}
+body{background-color: azure;
+ margin: 20px;
+ border-radius: 15px;
+}
+aside{float: right;
+    color: aliceblue;
+
+}
+article{color: aliceblue;}
+p{color: aliceblue;}
+
+img{float: right;}
+#div1{float: right;}
